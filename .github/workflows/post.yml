@@ -18,7 +18,6 @@ jobs:
         env:
           BSKY_HANDLE: ${{ secrets.BSKY_HANDLE }}
           BSKY_PASSWORD: ${{ secrets.BSKY_PASSWORD }}
-          MASTODON_HANDLE: @thenccourage@sportsbots.xyz
-          MASTODON_ACCOUNT_ID: 109751526687631967
-          ALTERNATE_CARD_IMAGE: https://www.nccourage.com/wp-content/uploads/sites/63/2024/04/cropped-NC_Courage_Logo_Fullcolor.png
-          
+          MASTODON_HANDLE: "@thenccourage@sportsbots.xyz"
+          MASTODON_ACCOUNT_ID: "109751526687631967"
+          ALTERNATE_CARD_IMAGE: "https://www.nccourage.com/wp-content/uploads/sites/63/2024/04/cropped-NC_Courage_Logo_Fullcolor.png"
