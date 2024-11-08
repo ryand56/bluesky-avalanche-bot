@@ -1,4 +1,4 @@
-name: "Post to Bluesky (v2)"
+name: "Post to Bluesky - CourageBot"
 on:
   schedule:
     - cron: "*/10 * * * *"
@@ -16,7 +16,7 @@ jobs:
       - name: Send post
         run: npm start
         env:
-          BSKY_HANDLE: ${{ secrets.BSKY_HANDLE }}
+          BSKY_HANDLE: couragebot.bsky.social
           BSKY_PASSWORD: ${{ secrets.BSKY_PASSWORD }}
           MASTODON_HANDLE: "@thenccourage@sportsbots.xyz"
           MASTODON_ACCOUNT_ID: "109751526687631967"
