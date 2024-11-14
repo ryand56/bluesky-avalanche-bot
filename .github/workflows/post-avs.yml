@@ -1,4 +1,4 @@
-name: "Post to Bluesky - NWSLBot"
+name: "Post to Bluesky - Avalanche Bot"
 on:
   schedule:
     - cron: "*/12 0-7,14-23 * * *"
@@ -16,8 +16,8 @@ jobs:
       - name: Send post
         run: npm start
         env:
-          BSKY_HANDLE: nwslbot.bsky.social
-          BSKY_PASSWORD: ${{ secrets.NWSL_BSKY_PASSWORD }}
-          MASTODON_HANDLE: "@nwsl@sportsbots.xyz"
-          MASTODON_ACCOUNT_ID: "109751526697679323"
+          BSKY_HANDLE: notavs.bsky.social
+          BSKY_PASSWORD: ${{ secrets.AVSBOT_BSKY_PASSWORD }}
+          MASTODON_HANDLE: "@Avalanche@sportsbots.xyz"
+          MASTODON_ACCOUNT_ID: "109705346993799063"
           ALTERNATE_CARD_IMAGE: "https://pbs.twimg.com/profile_images/1808188448207261696/HPCczNqa_400x400.png"
