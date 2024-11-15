@@ -6,15 +6,23 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
         with:
-          node-version-file: ".nvmrc"
-      - run: npm ci
-      - run: npm run build
+          version: 9
+          run_install: false
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+      - name: Install dependencies
+        run: pnpm i --frozen-lockfile
+      - name: Build
+        run: pnpm run build
       - name: Send post
-        run: npm start
+        run: pnpm start
         env:
           BSKY_HANDLE: notavs.bsky.social
           BSKY_PASSWORD: ${{ secrets.AVSBOT_BSKY_PASSWORD }}
