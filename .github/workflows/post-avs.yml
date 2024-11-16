@@ -2,6 +2,7 @@ name: "Post to Bluesky - Avalanche Bot"
 on:
   schedule:
     - cron: "*/12 0-7,14-23 * * *"
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
