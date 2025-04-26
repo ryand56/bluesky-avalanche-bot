@@ -31,7 +31,7 @@ jobs:
       - name: Send post
         run: pnpm start
         env:
-          BSKY_HANDLE: notavs.bsky.social
+          BSKY_HANDLE: avsbot.ryand.ca
           BSKY_PASSWORD: ${{ secrets.AVSBOT_BSKY_PASSWORD }}
           MASTODON_HANDLE: "@Avalanche@sportsbots.xyz"
           MASTODON_ACCOUNT_ID: "109705346993799063"
